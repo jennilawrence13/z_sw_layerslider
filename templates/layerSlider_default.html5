@@ -1,0 +1,26 @@
+
+<?php if($this->type == 'image'): ?>
+  
+  <?php if($this->ifBg > 0): ?>
+    <img class="ls-bg<?php echo $this->cssClass; ?>" src="<?php echo $this->singleSRC ?>" alt="<?php echo $this->alt; ?>" <?php echo $this->size[3]; ?> <?php echo $this->rel; ?><?php if($this->pos): ?> <?php echo $this->pos; ?><?php endif; ?>>
+  <?php else: ?>
+    <img class="ls-s<?php echo $this->number; ?><?php echo $this->cssClass; ?>" src="<?php echo $this->singleSRC ?>" alt="<?php echo $this->alt; ?>" <?php echo $this->size[3]; ?> <?php echo $this->rel; ?><?php if($this->pos): ?> <?php echo $this->pos; ?><?php endif; ?>>
+  <?php endif; ?>
+  
+<?php else: ?>
+  
+  <?php if($this->ifBg > 0): ?>
+    <div class="ls-bg<?php echo $this->cssClass; ?>"<?php echo $this->rel; ?><?php if($this->pos): ?> <?php echo $this->pos; ?><?php endif; ?>>
+      <h1><?php echo $this->headline; ?></h1>
+      <h2><?php echo $this->subheadline; ?></h2>
+      <?php echo $this->teaser; ?>
+    </div>
+  <?php else: ?>
+    <div class="ls-s<?php echo $this->number; ?><?php echo $this->cssClass; ?>" <?php echo $this->rel; ?><?php if($this->pos): ?> <?php echo $this->pos; ?><?php endif; ?>>
+      <h1><?php echo $this->headline; ?></h1>
+      <h2><?php echo $this->subheadline; ?></h2>
+      <?php echo $this->teaser; ?>
+    </div>
+  <?php endif; ?>
+  
+<?php endif; ?>

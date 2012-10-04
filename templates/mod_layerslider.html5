@@ -1,0 +1,65 @@
+<?php $GLOBALS['TL_CSS'][] = 'system/modules/z_sw_layerslider/html/css/layerslider.css'; ?>
+
+<!-- indexer::stop -->
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+  
+  <?php if ($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+  <?php endif; ?>
+  
+  <div id="<?php echo $this->layerslider['alias']; ?>" style="height: <?php echo $this->layerslider['ls_size'][1]; ?>; width: <?php echo $this->layerslider['ls_size'][0]; ?>;">
+    <?php if(count($this->layerslider['slides']) > 0): ?>
+      <?php foreach($this->layerslider['slides'] as $slide): ?>
+        <div class="ls-layer" <?php echo $slide['rel']; ?>>
+          
+          <?php if(count($slide['elements']) > 0): ?>
+            <?php foreach($slide['elements'] as $element): ?>
+              <?php echo $element; ?>
+            <?php endforeach; ?>
+          <?php endif; ?>
+          
+        </div>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </div>
+  
+  <script src="system/modules/z_sw_layerslider/html/jQuery/jquery-1.6.2.min.js"></script>
+  <script src="system/modules/z_sw_layerslider/html/jQuery/jquery-easing-1.3.js"></script>
+  <script src="system/modules/z_sw_layerslider/html/js/layerslider.kreaturamedia.jquery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function()
+    {
+      $('#<?php echo $this->layerslider['alias']; ?>').layerSlider
+      ({
+        'autoStart'          : <?php echo $this->layerslider['ls_autoStart']; ?>,
+        'firstLayer'         : <?php echo $this->layerslider['ls_firstLayer']; ?>,
+        'twoWaySlideshow'    : <?php echo $this->layerslider['ls_twoWaySlideshow']; ?>,
+        'keybNav'            : <?php echo $this->layerslider['ls_keybNav']; ?>,
+        'touchNav'           : <?php echo $this->layerslider['ls_touchNav']; ?>,
+        'imgPreload'         : <?php echo $this->layerslider['ls_imgPreload']; ?>,
+        'navPrevNext'        : <?php echo $this->layerslider['ls_navPrevNext']; ?>,
+        'navStartStop'       : <?php echo $this->layerslider['ls_navStartStop']; ?>,
+        'navButtons'         : <?php echo $this->layerslider['ls_navButtons']; ?>,
+        'skin'               : '<?php echo $this->layerslider['ls_skin']; ?>',
+        'skinsPath'          : '<?php echo $this->layerslider['ls_skinsPath']; ?>/',
+        'pauseOnHover'       : <?php echo $this->layerslider['ls_pauseOnHover']; ?>,
+        'globalBGColor'      : '<?php echo html_entity_decode($this->layerslider['ls_globalBGColor']); ?>',
+        'globalBGImage'      : '<?php echo $this->layerslider['ls_globalBGImage']; ?>',
+        'animateFirstLayer'  : <?php echo $this->layerslider['ls_animateFirstLayer']; ?>,
+        'loops'              : <?php echo $this->layerslider['ls_loops']; ?>,
+        'forceLoopNum'       : <?php echo $this->layerslider['ls_forceLoopNum']; ?>,
+        'autoPlayVideos'     : <?php echo $this->layerslider['ls_autoPlayVideos']; ?>,
+        'autoPauseSlideshow' : '<?php echo $this->layerslider['ls_autoPauseSlideshow']; ?>',
+        'youtubePreview'     : '<?php echo $this->layerslider['ls_youtubePreview']; ?>',
+        <?php if($this->layerslider['ls_isYourLogo']): ?>
+        'yourLogo'           : '<?php echo $this->layerslider['ls_yourLogo']; ?>',
+        'yourLogoStyle'      : '<?php echo $this->layerslider['ls_yourLogoStyle']; ?>',
+        'yourLogoLink'       : '<?php echo $this->layerslider['ls_yourLogoLink']; ?>',
+        'yourLogoTarget'     : '<?php echo $this->layerslider['ls_yourLogoTarget']; ?>',
+        <?php endif; ?>
+      });
+    });
+  </script>
+
+</div>
+<!-- indexer::continue -->
