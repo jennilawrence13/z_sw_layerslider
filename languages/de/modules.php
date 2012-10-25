@@ -32,7 +32,7 @@
 /**
  * Back end modules
  */
-
+$GLOBALS['TL_LANG']['MOD']['layerslider'] = array('Layerslider', 'Slider mit verschiedenen Layern');
 
 /**
  * Front end modules
