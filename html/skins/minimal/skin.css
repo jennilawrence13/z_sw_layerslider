@@ -60,7 +60,8 @@
 	background-position: -300px 0px;
 }
 
-.ls-minimal .ls-nav-start:hover {
+.ls-minimal .ls-nav-start:hover,
+.ls-minimal .ls-nav-start-active {
 	background-position: -300px -75px;
 }
 
@@ -68,7 +69,8 @@
 	background-position: -450px 0px;
 }
 
-.ls-minimal .ls-nav-stop:hover {
+.ls-minimal .ls-nav-stop:hover,
+.ls-minimal .ls-nav-stop-active {
 	background-position: -450px -75px;
 }
 
@@ -76,7 +78,8 @@
 	background-position: 0px -150px;
 }
 
-.ls-minimal .ls-bottom-slidebuttons a.ls-nav-active {
+.ls-minimal .ls-bottom-slidebuttons a.ls-nav-active,
+.ls-minimal .ls-bottom-slidebuttons a:hover {
 	background-position: -75px -150px;
 }
 
@@ -137,4 +140,52 @@
 
 .ls-minimal .ls-nav-sides {
 	width: 4px;
+}
+
+
+
+.ls-minimal .ls-thumbnail-hover {
+	bottom: 50px;
+	padding: 4px;
+	margin-left: 1px;
+}
+
+.ls-minimal .ls-thumbnail-hover-bg {
+	background: white;
+}
+
+.ls-minimal .ls-thumbnail-hover span {
+	border: 5px solid white;
+	margin-left: -5px;
+}
+
+
+
+.ls-minimal .ls-thumbnail {
+	top: -20px;
+}
+
+.ls-minimal .ls-thumbnail-inner {
+	padding: 5px;
+	margin-left: -5px;
+	background: white;
+}
+
+.ls-minimal .ls-thumbnail-slide a {
+	margin-right: 5px;
+}
+
+.ls-minimal .ls-nothumb {
+	background: #eee;
+}
+
+
+
+.ls-minimal .ls-above-thumbnails {
+	display: none;
+}
+
+.ls-minimal .ls-below-thumbnails {
+	display: block;
+	margin-top: -20px;
 }

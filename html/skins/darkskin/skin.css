@@ -13,12 +13,6 @@
 	-webkit-border-radius: 6px;
 }
 
-.ls-darkskin .ls-bottom-nav-wrapper {
-	text-align: center;
-	margin: -28px auto 0px auto;
-	position: relative;
-}
-
 .ls-darkskin .ls-playvideo {
 	width: 50px;
 	height: 50px;
@@ -65,7 +59,8 @@
 	background-position: -300px 0px;
 }
 
-.ls-darkskin .ls-nav-start:hover {
+.ls-darkskin .ls-nav-start:hover,
+.ls-darkskin .ls-nav-start-active {
 	background-position: -300px -75px;
 }
 
@@ -73,7 +68,8 @@
 	background-position: -450px 0px;
 }
 
-.ls-darkskin .ls-nav-stop:hover {
+.ls-darkskin .ls-nav-stop:hover,
+.ls-darkskin .ls-nav-stop-active {
 	background-position: -450px -75px;
 }
 
@@ -81,7 +77,8 @@
 	background-position: 0px -150px;
 }
 
-.ls-darkskin .ls-bottom-slidebuttons a.ls-nav-active {
+.ls-darkskin .ls-bottom-slidebuttons a.ls-nav-active,
+.ls-darkskin .ls-bottom-slidebuttons a:hover {
 	background-position: -75px -150px;
 }
 
@@ -119,7 +116,6 @@
 .ls-darkskin .ls-bottom-slidebuttons a,
 .ls-darkskin .ls-nav-start,
 .ls-darkskin .ls-nav-stop,
-.ls-darkskin .ls-bottom-nav-wrapper,
 .ls-darkskin .ls-nav-sides {
 	height: 28px;
 }
@@ -130,6 +126,13 @@
 .ls-darkskin .ls-nav-stop,
 .ls-darkskin .ls-nav-sides {
 	display: inline-block;
+}
+
+.ls-darkskin .ls-bottom-slidebuttons,
+.ls-darkskin .ls-nav-start,
+.ls-darkskin .ls-nav-stop,
+.ls-darkskin .ls-nav-sides {
+	top: -28px;
 }
 
 .ls-darkskin .ls-nav-start,
@@ -143,4 +146,54 @@
 
 .ls-darkskin .ls-nav-sides {
 	width: 44px;
+}
+
+
+
+.ls-darkskin .ls-thumbnail-hover {
+	padding: 4px;	
+}
+
+.ls-darkskin .ls-thumbnail-hover {
+	bottom: 40px;
+	margin-left: 1px;
+}
+
+.ls-darkskin .ls-thumbnail-hover-bg {
+	background: #222;
+	box-shadow: 0px 2px 12px -4px black;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.ls-darkskin .ls-thumbnail-hover span {
+	border: 5px solid #222;
+	margin-left: -5px;
+}
+
+
+
+.ls-darkskin .ls-thumbnail {
+	padding-top: 15px;
+}
+
+.ls-darkskin .ls-thumbnail-inner {
+	padding: 5px;
+	margin-left: -5px;
+	background: #222;
+	box-shadow: 0px 3px 15px -5px #000;
+	-moz-box-shadow: 0px 3px 15px -5px #000;
+	-webkit-box-shadow: 0px 3px 15px -5px #000;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.ls-darkskin .ls-thumbnail-slide a {
+	margin-right: 5px;
+}
+
+.ls-darkskin .ls-nothumb {
+	background: #333;
 }
